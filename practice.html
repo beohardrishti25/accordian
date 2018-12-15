@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+.accordion {
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active {
+  background-color: #939292;
+}
+ .accordion:hover {
+  background-color: #7a7979;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+</style>
+</head>
+<title> CAMPUS AMBASSADOR</title>
+<body>
+
+  <ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+
+<img src="hazel2.png" alt="VISION" style="width:1300px;height:200px;">
+<div class="content">
+<h2>INFORMATION</h2>
+<button class="accordion" > <b>Why be a CA?</b></button>
+<div id= "a" class="panel">
+  <p> Being A Campus Ambassador transforms you as an individual.
+Enhance your communication and managerial skills
+Interact with people coming from diverse fields to develop your network
+Be associated with Central India's largest Workshop Convention and lead your college to a promising future
+An opportunity to represent your College at a higher level.
+</p>
+</div>
+
+
+<button class="accordion" > <b>Rewards</b></button>
+<div id= "b" class="panel" style="display:none">
+  <p> Certificates of Coordination as a recognition for their work
+Letter of Recommendation to successfull CAs
+Free entry to Workshops worth Rs.38000 in NOESIS 5.0
+</p>
+</div>
+
+<button class="accordion" ><b>What do you do as a CA?</b></button>
+<div id= "c" class="panel" style="display:none">
+  <p>Publicity: Displaying posters of Noesis 5.0 within 2-3 days of receiving them on college groups, bulletins and notice boards.
+Social Media: Publicising the events of Noesis 5.0 on various Social media platforms like WhatsApp, Facebook, Twitter, Instagram by sharing Noesis' posts on all College groups and with your contacts.
+ </p>
+</div>
+
+<h2>Help</h2>
+<h3>FAQs</h3>
+<button class="accordion"> <b>Who is a CA?</b></button>
+<div class="panel">
+  <p>
+A person who is the link between NOESIS 5.0 and your college. He/She will be the first point of contact for the aforementioned responsibilities.
+Fill out your details on our CA Portal home and you're good to go.
+
+</p>
+</div>
+<button class="accordion"><b>How should I apply?</b></button>
+<div class="panel">
+  <p> Fill out your details on our CA Portal home and you're good to go.
+</p>
+</div>
+
+<button class="accordion"><b>How much time would I be spending in this work?</b></button>
+<div class="panel">
+  <p> Only sincere efforts are needed towards the assigned work. Not much time would be asked for.
+</p>
+</div>
+
+<button class="accordion"><b>What is the eligibility to become a College Ambassador</b>?</button>
+<div class="panel">
+  <p>A valid college ID is all you need.</p>
+</div>
+
+<button class="accordion"><b>How do I know my work?</b></button>
+<div class="panel">
+  <p>You'll be contacted through mails and texts.</p>
+</div>
+
+<h2>ABOUT</h2>
+<p><b>Contact Us</b></p>
+<p><b>Email</b>: teamvisionnitb@gmail.com		</p>
+<p><b>Facebook</b>: fb.me/visionmanitfb.me/noesisNITB</p>
+<p><strong>Call</strong>: Abhishek Agarwal (       )<br>
+      Ishaan Dwivedi   (       ) </p>
+
+</div>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i,j;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block")
+     {
+      panel.style.display = "none";
+    }
+     else
+    {
+      panel.style.display = "block";
+    }
+    for( j=0; j<acc.length; j++){
+      acc[j].addEventListener("click",function(){
+        this.classList.toggle("active");
+        var panel1=this.nextElementSibling;
+        if (panel.style.display === "block")
+         {
+          panel.style.display = "none";
+        }
+      })
+    }
+  });
+}
+</script>
+
+</body>
+</html>
